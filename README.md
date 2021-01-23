@@ -19,9 +19,9 @@ As it is a docker compose you will both need the docker software and docker-comp
 Next issue the following commands:
 ```##cd into the electricity pillory folder
 cd electricity_pillory
-##build the contasiners
+##build the containers
 docker-compose build
-##After the build process is done (in my take a while) start the docker-compose
+##After the build process is done (it may take a while) start the docker-compose
 docker-compose up
 ##If you would like to start it as a deamon ad a hyhpen d to the command
 docker-compose up -d
