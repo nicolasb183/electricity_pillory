@@ -37,9 +37,9 @@ Before you can acess the data from Eloverblik you need to make sure that you add
 ### Get a token
 
 [Get a token](https://energinet.dk/-/media/89C11ABC00C84D4CA8B3B96819169A44.pdf)
-## The grafan dashboard
+## The grafana dashboard
 The grafana dashboard can be acessed on port 3000. To acess it simply type ```localhost:3000```. The default username and password fpr grafana is admin/admin. After the first login you will have to provide a new password for the admin user. 
-### Add the influx datasource to grafana
+### Add the influxDB datasource to grafana
 Go to the gearwheelicon and cick on "Data Source". Then clikc on "Add data source" and choose "influxDB". Entner the following configuarions:
 - url: db:8086
 - Database: db_0
