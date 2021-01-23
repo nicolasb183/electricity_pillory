@@ -48,7 +48,7 @@ Go to the gearwheelicon and cick on "Data Source". Then clikc on "Add data sourc
 
 click on "Save and Test". If everything went right you now added your influxDB datasource to grafana. 
 #### Add your first dashboard
-A default dashboard is added to the repository and can be used in order to do some initial checks. Feel free to modify/change the dashboard in whatever way you like. In order to add the dashboard go to the plus sign (+) and click on "import". Next click on "Upload JSON file". Choose the "Solar_dashjson.json" file from the Electricity Pillory
+A default dashboard is added to the repository and can be used in order to do some initial checks. Feel free to modify/change the dashboard in whatever way you like. In order to add the dashboard go to the plus sign (+) and click on "import". Next click on "Upload JSON file". Choose the "Solar_dashjson.json" file from the Electricity Pillory.
 ## Default settings
 ### Add a user
 ```localhost:5000```
