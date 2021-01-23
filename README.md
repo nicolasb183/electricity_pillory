@@ -1,6 +1,6 @@
 
 # Electricity Pillory
-Electricity Pillory is a docker-compose that is based on python, grafana and an influxDB. The Electricity Pillory pull electricity meetering data from the Danish TSO's (Energinet) platform eloverblik.dk and vizaulizes it in a grafana dashboard. After adding a user to the pillory the software pulls the data automatically and updates it once a day. Thus it is easily possible to build your own electricity dashboard and follow your own consumption/production on the dash. 
+Electricity Pillory is a docker-compose that is based on python, grafana and an influxDB. The Electricity Pillory pulls electricity meetering data from the Danish TSO's (Energinet) platform eloverblik.dk and vizaulizes it in a grafana dashboard. After adding a user to the pillory the software pulls the data automatically and updates it once a day. Thus it is easily possible to build your own electricity dashboard and follow your own consumption/production on the dash. 
 
 ## Available features
 - Add a user without specifying a meeteringID (leave it blank) will pull the data on the first meeteringpoint the eloverblik API sends
