@@ -51,15 +51,15 @@ A default dashboard is added to the repository and can be used in order to do so
 ### Add a user
 ```localhost:5000```
 ### Grafana
-```localhost:3000```
-username:admin
-password:admin
+```localhost:3000```  
+username:admin  
+password:admin  
 ### Database
-network adress (inside the compose): db
-port: 8086
-database:db_0
-username:admin
-password: user123
+network adress (inside the compose): db  
+port: 8086  
+database:db_0  
+username:admin  
+password: user123  
 ## Disclaimer
 I'm either a python prgrammer or a grafana specialist. I build this dashboard for my pricate use and offer it to other without any warranty or support. Feel free to use it if you like. I would be happy for any contributions to the project. 
 
