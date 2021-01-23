@@ -5,13 +5,14 @@ Electricity Pillory is a docker-compose that is based on python, grafana and an 
 ## Available features
 - Add a user without specifying a meeteringID (leave it blank) will pull the data on the first meeteringpoint the eloverblik API sends
 - Specify a meeteringID will pull the measurements on this specific meeteringID. Thus it is for example possible to pull data on a specific meetering point, forexample your summerhouse or your rooftop installed solar panels
--Add usernames for visualizing multiple users data. This can also be used to visualize different locations measurements ("summerhouse"/"home")
--Add cathegories in order to distinguish between different measurements (e.g. "production"/"conssumption" or "meetering1"/"meetering2"
--As it uses grafana as dashboard you can freely change the apperiance of the dahsboard and also add/remove panels
+- Add usernames for visualizing multiple users data. This can also be used to visualize different locations measurements ("summerhouse"/"home")
+- Add cathegories in order to distinguish between different measurements (e.g. "production"/"conssumption" or "meetering1"/"meetering2"
+- As it uses grafana as dashboard you can freely change the apperiance of the dahsboard and also add/remove panels
 ## Installation
 The Electricity Pillory is a docker-compose that was developed to use it on a rasperry pi (raspberry pi os, earlier raspbian). It also runs on ubunut (20.04), other operating systems weren't tested yet. 
 In order to install it download the repository or do a simple 
-```git clone https://github.com/nicolasb183/electricity_pillory.git```
+```
+git clone https://github.com/nicolasb183/electricity_pillory.git```
 As it is a docker compose you will both need the docker software and docker-compose installed on your system. Find a guide to install this on a search engine of your choice. 
 Next issue the following commands:
 ```##cd into the electricity pillory folder
@@ -36,10 +37,10 @@ Before you can acess the data from Eloverblik you need to make sure that you add
 The grafana dashboard can be acessed on port 3000. To acess it simply type ```localhost:3000```. The default username and password fpr grafana is admin/admin. After the first login you will have to provide a new password for the admin user. 
 ### Add the influx datasource to grafana
 Go to the gearwheelicon and cick on "Data Source". Then clikc on "Add data source" and choose "influxDB". Entner the following configuarions:
--- url: db:8086
--- Database: db_0
--- user:admin
--- password:user123
+- url: db:8086
+- Database: db_0
+- user:admin
+- password:user123
 
 click on "Save and Test". If everything went right you now added your influxDB datasource to grafana. 
 #### Add your first dashboard
