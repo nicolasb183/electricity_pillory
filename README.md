@@ -62,7 +62,7 @@ A default dashboard is added to the repository and can be used in order to do so
 username:admin  
 password:admin  
 ### Database
-network adress (inside the compose): db  
+network address (inside the compose): db  
 port: 8086  
 database:db_0  
 username:admin  
