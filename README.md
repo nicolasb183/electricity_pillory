@@ -70,7 +70,7 @@ password: user123
 ## ToDo
 - Add correct volumes to grafana in the docker-compose file so settings will be kept
 - Propably better error handling would be nice - the pillory chrashes, when something goes wrong
-- A better userinterface to the database would be useful. Currently you have to edit the database directly from within the container
+- A better user interface to the database would be useful. Currently you have to edit the database directly from within the container
 ## Disclaimer
 I'm either a python prgrammer or a grafana specialist. I built this dashboard for my pricate use and offer it to other without any warranty or support. Feel free to use it if you like. I would be happy for any contributions to the project. 
 
