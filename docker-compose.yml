@@ -1,0 +1,47 @@
+version: "3"
+services:
+  db:
+    build: ./influxdb
+    volumes:
+    # Mount for influxdb data directory
+    - ./influxdb/data:/var/lib/influxdb
+    environment:
+    - INFLUXDB_DB=db_0
+    - INFLUXDB_ADMIN_USER="admin"
+    - INFLUXDB_ADMIN_PASSWORD="user123"
+    ports: 
+      - "8086:8086"
+    restart: on-failure
+  grafana:
+     build: ./grafana
+     ports: 
+      - "3000:3000"
+     restart: on-failure
+#     user: "1000"
+#     volumes:
+#      - ./grafana/config:/etc/grafana/grafana.ini
+#      - ./grafana/config/dashboards:/var/lib/grafana/dashboards
+#      - ./grafana/config/datasources:/etc/grafana/datasources
+#      - ./grafana/config/plugins:/var/lib/grafana/plugins
+#      - ./grafana/grafana_data:/var/lib/grafana
+      
+  get_data:
+     build: ./get_data
+     volumes: 
+      - "./get_data/scripts:/usr/local/bin/scripts"
+     depends_on:
+      - db
+      - grafana
+      - get_users
+     restart: on-failure
+  get_users:
+     build: ./get_users
+
+     ports: 
+      - "5000:5000"
+     depends_on:
+      - db
+      - grafana
+     restart: on-failure
+
+
