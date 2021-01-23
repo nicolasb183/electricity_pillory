@@ -12,7 +12,9 @@ Electricity Pillory is a docker-compose that is based on python, grafana and an 
 The Electricity Pillory is a docker-compose that was developed to use it on a rasperry pi (raspberry pi os, earlier raspbian). It also runs on ubunut (20.04), other operating systems weren't tested yet. 
 In order to install it download the repository or do a simple 
 ```
-git clone https://github.com/nicolasb183/electricity_pillory.git```
+git clone https://github.com/nicolasb183/electricity_pillory.git
+```
+
 As it is a docker compose you will both need the docker software and docker-compose installed on your system. Find a guide to install this on a search engine of your choice. 
 Next issue the following commands:
 ```##cd into the electricity pillory folder
