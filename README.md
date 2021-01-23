@@ -1,6 +1,6 @@
 
 # Electricity Pillory
-Electricity pillory is a docker-compose that is based on python, grafana and an influxdb. The electricity pillory pull electricity meetering data from the Danish TSO's (Energinet) platform eloverblik.dk and vizaulizes it in a grafana dashboard. After adding a user to the pillory the software pulls the data automatically and updates it once a day. Thus it is easily possible to build your own electricity dashboard and follow your own consumption/production on the dash. 
+Electricity Pillory is a docker-compose that is based on python, grafana and an influxDB. The Electricity Pillory pull electricity meetering data from the Danish TSO's (Energinet) platform eloverblik.dk and vizaulizes it in a grafana dashboard. After adding a user to the pillory the software pulls the data automatically and updates it once a day. Thus it is easily possible to build your own electricity dashboard and follow your own consumption/production on the dash. 
 
 ## Available features
 - Add a user without specifying a meeteringID (leave it blank) will pull the data on the first meeteringpoint the eloverblik API sends
@@ -9,7 +9,7 @@ Electricity pillory is a docker-compose that is based on python, grafana and an 
 -Add cathegories in order to distinguish between different measurements (e.g. "production"/"conssumption" or "meetering1"/"meetering2"
 -As it uses grafana as dashboard you can freely change the apperiance of the dahsboard and also add/remove panels
 ## Installation
-The electricity pillory is a docker-compose that was developed to use it on a rasperry pi (raspberry pi os, earlier raspbian). It also runs on ubunut (20.04), other operating systems weren't tested yet. 
+The Electricity Pillory is a docker-compose that was developed to use it on a rasperry pi (raspberry pi os, earlier raspbian). It also runs on ubunut (20.04), other operating systems weren't tested yet. 
 In order to install it download the repository or do a simple 
 ```git clone https://github.com/nicolasb183/electricity_pillory.git```
 As it is a docker compose you will both need the docker software and docker-compose installed on your system. Find a guide to install this on a search engine of your choice. 
@@ -23,4 +23,37 @@ docker-compose up
 ##If you would like to start it as a deamon ad a hyhpen d to the command
 docker-compose up -d
 ```
+## Add a users
+The Electricity Pillory exposes a simple webform on port 5000 to add new users to the database. to acess it simply go to your browser and type ´´´localhost:5000´´´
+###Add a meetering point to Eloverblik
+Before you can acess the data from Eloverblik you need to make sure that you added your meetering points to portal. In order to do so read the following [guide](https://energinet.dk/-/media/1C8ECDF4A59C4568A5C05798E4D2B5BD.pdf) fron Energinet. 
+###Get a token
+[Get a token](https://energinet.dk/-/media/89C11ABC00C84D4CA8B3B96819169A44.pdf)
+## The grafan dashboard
+The grafana dashboard can be acessed on port 3000. To acess it simply type ```localhost:3000```. The default username and password fpr grafana is admin/admin. After the first login you will have to provide a new password for the admin user. 
+### Add the influx datasource to grafana
+Go to the gearwheelicon and cick on "Data Source". Then clikc on "Add data source" and choose "influxDB". Entner the following configuarions:
+--url: db:8086
+--Database: db_0
+--user:admin
+--password:user123
+
+click on "Save and Test". If everything went right you now added your influxDB datasource to grafana. 
+#### Add your first dashboard
+A default dashboard is added to the repository and can be used in order to do some initial checks. Feel free to modify/change the dashboard in whatever way you like. In order to add the dashboard go to the plus sign (+) and click on "import". Next click on "Upload JSON file". Choose the "Solar_dashjson.json" file from the Electricity Pillory
+##Default settings
+###Add a user
+```localhost:5000```
+###Grafana
+```localhost:3000```
+username:admin
+password:admin
+###Database
+network adress (inside the compose): db
+port: 8086
+database:db_0
+username:admin
+password: user123
+##Disclaimer
+I'm either a python prgrammer or a grafana specialist. I build this dashboard for my pricate use and offer it to other without any warranty or support. Feel free to use it if you like. I would be happy for any contributions to the project. 
 
