@@ -27,7 +27,9 @@ docker-compose up
 docker-compose up -d
 ```
 ## Add a users
-The Electricity Pillory exposes a simple webform on port 5000 to add new users to the database. to acess it simply go to your browser and type ´´´localhost:5000´´´
+The Electricity Pillory exposes a simple webform on port 5000 to add new users to the database. to acess it simply go to your browser and type  
+```localhost:5000```
+
 ### Add a meetering point to Eloverblik
 Before you can acess the data from Eloverblik you need to make sure that you added your meetering points to portal. In order to do so read the following from Energinet. 
 
@@ -61,5 +63,5 @@ database:db_0
 username:admin  
 password: user123  
 ## Disclaimer
-I'm either a python prgrammer or a grafana specialist. I build this dashboard for my pricate use and offer it to other without any warranty or support. Feel free to use it if you like. I would be happy for any contributions to the project. 
+I'm either a python prgrammer or a grafana specialist. I built this dashboard for my pricate use and offer it to other without any warranty or support. Feel free to use it if you like. I would be happy for any contributions to the project. 
 
