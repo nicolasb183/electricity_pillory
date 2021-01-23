@@ -67,7 +67,7 @@ port: 8086
 database:db_0  
 username:admin  
 password: user123 
-##ToDo
+## ToDo
 - Add correct volumes to grafana in the docker-compose file so settings will be kept
 - Propably better error handling would be nice - the pillory chrashes, when something goes wrong
 - A better userinterface to the database would be useful. Currently you have to edit the database directly from within the container
