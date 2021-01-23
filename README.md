@@ -72,5 +72,5 @@ password:user123
 - Probably better error handling would be nice - the pillory chrashes, when something goes wrong
 - A better user interface to the database would be useful. Currently you have to edit the database directly from within the container
 ## Disclaimer
-I'm either a python prgrammer or a grafana specialist. I built this dashboard for my pricate use and offer it to other without any warranty or support. Feel free to use it if you like. I would be happy for any contributions to the project. 
+I'm either a python prgrammer or a grafana specialist. I built this dashboard for my private use and offer it to others without any warranty or support. Feel free to use it if you like. I would be happy for any contributions to the project. 
 
