@@ -29,6 +29,11 @@ docker-compose up -d
 ## Add a users
 The Electricity Pillory exposes a simple webform on port 5000 to add new users to the database. to acess it simply go to your browser and type  
 ```localhost:5000```
+- Navn: Your name/your companies name
+- Token: A token in order to acess data from ELOverblik. In order to recieve a token see the guide below. 
+- Maalepunkt: Your meeteringpointID (optional, if you leave it blank the first consumption meeteringpointId will be chosen)
+- Personer i husholdning : The number of persons living together with you
+- Afdeling: Optional to add an additional tag - e.g. "Production"/"Consumption" or "IT Departement"/"Accounting"
 
 ### Add a meetering point to Eloverblik
 Before you can acess the data from Eloverblik you need to make sure that you added your meetering points to portal. In order to do so read the following from Energinet. 
@@ -48,7 +53,7 @@ Go to the gearwheelicon and cick on "Data Source". Then clikc on "Add data sourc
 
 click on "Save and Test". If everything went right you now added your influxDB datasource to grafana. 
 #### Add your first dashboard
-A default dashboard is added to the repository and can be used in order to do some initial checks. Feel free to modify/change the dashboard in whatever way you like. In order to add the dashboard go to the plus sign (+) and click on "import". Next click on "Upload JSON file". Choose the "Solar_dashjson.json" file from the Electricity Pillory.
+A default dashboard is added to the repository and can be used in order to do some initial checks. Feel free to modify/change the dashboard in whatever way you like. In order to add the dashboard go to the plus sign (+) and click on "import". Next click on "Upload JSON file". Choose the "Solar_dashjson.json" file from the Electricity Pillory. For the "Solar_dashjson.json" you need to specify production/consumtion (produktion/forbrug) in the "Afdeling" field when adding a users, as the dash is filtering the data based on those attributes. 
 ## Default settings
 ### Add a user
 ```localhost:5000```
@@ -61,7 +66,11 @@ network adress (inside the compose): db
 port: 8086  
 database:db_0  
 username:admin  
-password: user123  
+password: user123 
+##ToDo
+- Add correct volumes to grafana in the docker-compose file so settings will be kept
+- Propably better error handling would be nice - the pillory chrashes, when something goes wrong
+- A better userinterface to the database would be useful. Currently you have to edit the database directly from within the container
 ## Disclaimer
 I'm either a python prgrammer or a grafana specialist. I built this dashboard for my pricate use and offer it to other without any warranty or support. Feel free to use it if you like. I would be happy for any contributions to the project. 
 
