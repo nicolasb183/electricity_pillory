@@ -25,9 +25,9 @@ docker-compose up -d
 ```
 ## Add a users
 The Electricity Pillory exposes a simple webform on port 5000 to add new users to the database. to acess it simply go to your browser and type ´´´localhost:5000´´´
-###Add a meetering point to Eloverblik
+### Add a meetering point to Eloverblik
 Before you can acess the data from Eloverblik you need to make sure that you added your meetering points to portal. In order to do so read the following [guide](https://energinet.dk/-/media/1C8ECDF4A59C4568A5C05798E4D2B5BD.pdf) fron Energinet. 
-###Get a token
+### Get a token
 [Get a token](https://energinet.dk/-/media/89C11ABC00C84D4CA8B3B96819169A44.pdf)
 ## The grafan dashboard
 The grafana dashboard can be acessed on port 3000. To acess it simply type ```localhost:3000```. The default username and password fpr grafana is admin/admin. After the first login you will have to provide a new password for the admin user. 
