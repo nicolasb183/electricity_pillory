@@ -26,7 +26,7 @@ docker-compose up
 ##If you would like to start it as a deamon ad a hyhpen d to the command
 docker-compose up -d
 ```
-## Add a users
+## Add a user
 The Electricity Pillory exposes a simple webform on port 5000 to add new users to the database. to acess it simply go to your browser and type  
 ```localhost:5000```
 - Navn: Your name/your companies name
