@@ -36,7 +36,7 @@ The Electricity Pillory exposes a simple web form on port 5000 to add new users 
 - Afdeling: Optional to add an additional tag - e.g. "Production"/"Consumption" or "IT Department"/"Accounting"
 
 ### Add a metering point to Eloverblik
-Before you can access the data from Eloverblik you need to make sure that you added your metering points to portal. In order to do so read the following from Energinet. 
+Before you can access the data from Eloverblik you need to make sure that you added your metering points to portal. In order to do so read the following guide from Energinet. 
 
 [Read the guide](https://energinet.dk/-/media/1C8ECDF4A59C4568A5C05798E4D2B5BD.pdf)
 ### Get a token
